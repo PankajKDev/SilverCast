@@ -1,0 +1,32 @@
+#navbarContainer {
+  display: flex;
+  width: 100svw;
+  width: 100dvw;
+  width: 100vw;
+  width: 100vw;
+  height: 10svh;
+  height: 10dvh;
+  height: 10vh;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 100;
+}
+#navbar {
+  background-color: aliceblue;
+  display: flex;
+  width: 21rem;
+  list-style: none;
+  align-items: center;
+  border-radius: 50px;
+  border: 1px solid black;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.navItem {
+  flex: 1;
+  cursor: pointer;
+}
+.Home {
+  margin-left: 1rem;
+}

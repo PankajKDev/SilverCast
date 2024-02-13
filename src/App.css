@@ -1,0 +1,34 @@
+.container {
+  display: flex;
+  align-items: center;
+}
+* {
+  scroll-behavior: smooth;
+}
+.card {
+  width: 50%;
+  height: 22rem;
+
+  margin: 8px;
+}
+
+@media (max-width: 1024px) {
+  .card {
+    width: 98%; /* Adjust card width to fit within container */
+  }
+  .container {
+    flex-direction: column;
+  }
+}
+.spCard {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  background: rgb(84, 152, 194);
+  border: 1px solid aquamarine;
+  color: white;
+}

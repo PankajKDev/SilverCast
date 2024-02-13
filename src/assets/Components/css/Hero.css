@@ -1,0 +1,125 @@
+/* Container */
+#hero {
+  display: grid;
+  grid-template-rows: 55vh; /* Two rows with specific sizes */
+  grid-template-columns: 1fr 1.5fr 1fr; /* Three columns with fractional sizes */
+  width: 100vw;
+  z-index: 1;
+}
+
+@media (max-width: 1024px) {
+  #hero {
+    grid-template-columns: 1fr; /* Single column for smaller screens */
+    grid-template-rows: repeat(3, 40vh); /* Three rows with equal heights */
+  }
+
+  .HItem:nth-child(1) {
+    order: 1; /* Change order of first item */
+  }
+
+  .HItem:nth-child(2) {
+    order: 0; /* Change order of second item */
+  }
+}
+
+/* Centered Box */
+.BoxCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Styled Box */
+.neoBox {
+  width: 96%;
+  height: 96%;
+  display: flex;
+  gap: 10%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+.neoColor {
+  /* background: rgb(84, 152, 194); */
+  background-color: rgb(175, 124, 79);
+  border: 1px solid aquamarine;
+  color: white;
+}
+.xeoColor {
+  color: #e0eaff;
+  background: rgb(0, 0, 0);
+  border: 1px solid rgb(0, 139, 139);
+}
+
+/* Text Styling */
+.wowtxt {
+  font-weight: 500;
+}
+
+/* Subsection Styling */
+.subNeo {
+  display: inline-flex;
+  margin-top: 15px;
+}
+
+.subNeoImage {
+  margin-right: 1rem;
+  margin-top: -1px;
+}
+
+@media (max-width: 600px) {
+  #TEMPX {
+    font-weight: bolder;
+  }
+}
+
+#TEMPX {
+  font-size: 5rem;
+  display: flex;
+  font-weight: 600;
+}
+
+/* BigImage */
+.big-image-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+}
+
+.background-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 20rem;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.search-input {
+  width: calc(100% - 20px);
+  margin: 10px;
+  height: 40px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+.big-text {
+  font-size: 3rem;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-weight: 700;
+}
