@@ -26,7 +26,7 @@ export const AppProvider = ({ children }) => {
   const fetchData = async () => {
     try {
       const response = await fetch(
-        `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${search}&aqi=yes`
+        `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${search}&aqi=yes`
       );
       const result = await response.json();
 
