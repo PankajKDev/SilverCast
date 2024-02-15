@@ -21,7 +21,7 @@ export const AppProvider = ({ children }) => {
   const [search, setSearch] = useState("delhi,india");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
-  const apiKey = process.env.VITE_REACT_APP_KEY;
+  const apiKey = import.meta.env.VITE_REACT_APP_KEY;
 
   const fetchData = async () => {
     try {
