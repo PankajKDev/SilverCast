@@ -47,6 +47,7 @@ To run the SilverCast Weather App locally, follow these steps:
 
 ## Usage
 
+0. Add .env file in root in format "VITE_API_KEY=yourApiKey from  [WeatherAPI](https://www.weatherapi.com)
 1. Enter a city name or location coordinates in the search bar.
 2. Press the "Search" button or hit Enter to fetch weather information.
 3. View the current weather conditions displayed on the screen.
