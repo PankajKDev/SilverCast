@@ -1,6 +1,3 @@
-import AQImage from "./Images/aqi.svg";
-import Wind from "./Images/wind.svg";
-import Humid from "./Images/humid.svg";
 import { useAppContext } from "../../Context";
 
 function WData() {
@@ -14,12 +11,14 @@ function WData() {
           darkMode ? "neoColor" : "xeoColor"
         }`}
       >
-        <div className={`neoBox${darkMode ? "neoColor" : "xeoColor"}`}>
+        <div>
           <div
             style={{
               display: "flex",
               flexDirection: "column",
               justifyContent: "space-around",
+              wrap: "column",
+              alignItems: "center",
             }}
           >
             <div className="subNeo">
@@ -28,6 +27,7 @@ function WData() {
                 style={{
                   marginTop: "15px",
                   fontSize: "3rem",
+                  alignItems: "center",
                 }}
                 className="AQI"
               >
@@ -35,7 +35,13 @@ function WData() {
               </div>
             </div>
             <div
-              style={{ display: "flex", flexDirection: "column", gap: "5px" }}
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                flexWrap: "wrap",
+                gap: "5px",
+                alignItems: "center",
+              }}
               className="subNeo"
             >
               <h2 className="wowtxt">
@@ -49,7 +55,6 @@ function WData() {
               </h2>
               <h2 className="wowtxt">
                 Wind Speed: {data?.current?.wind_kph}kmph&#47;
-                {data?.current?.wind_mph}mph
               </h2>
             </div>
           </div>

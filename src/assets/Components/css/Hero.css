@@ -59,7 +59,8 @@
 
 /* Subsection Styling */
 .subNeo {
-  display: inline-flex;
+  display: flex;
+  flex-wrap: wrap;
   margin-top: 15px;
 }
 
@@ -104,6 +105,7 @@
   width: 20rem;
   z-index: 1;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
 }

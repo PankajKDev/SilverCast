@@ -1,6 +1,7 @@
 import { useAppContext } from "../../Context";
 import Button from "@mui/material/Button";
 import WeatherImages from "./microComponents/WeatherImages";
+import searchIcon from "../Components/Images/searchIcon.svg";
 function BigImage() {
   const { data, search, setSearch, fetchData } = useAppContext();
   const handleSearch = () => {
@@ -26,27 +27,36 @@ function BigImage() {
           >
             {data?.location?.region}
           </span>
-          <input
-            value={search}
-            type="text"
-            placeholder="Search..."
-            className="search-input"
-            onChange={(e) => setSearch(e.target.value)}
-          />
-          <Button
-            onClick={handleSearch}
-            sx={{
-              borderRadius: "40px",
-              height: "20%",
-              fontSize: "13px",
-              marginLeft: "5px",
-              fontWeight: "800",
+
+          <form
+            style={{ display: "flex", alignItems: "center" }}
+            onSubmit={(e) => {
+              e.preventDefault();
+              handleSearch();
             }}
-            color="success"
-            variant="contained"
           >
-            Search?
-          </Button>
+            <input
+              value={search}
+              type="text"
+              placeholder="Search..."
+              className="search-input"
+              onChange={(e) => setSearch(e.target.value)}
+            />
+            <Button
+              type="submit"
+              sx={{
+                borderRadius: "10px",
+                height: "20%",
+                fontSize: "13px",
+                marginLeft: "3px",
+                fontWeight: "800",
+              }}
+              color="success"
+              variant="contained"
+            >
+              <img src={searchIcon} alt="s" />
+            </Button>
+          </form>
         </div>
       </div>
     </div>

@@ -2,9 +2,7 @@
   display: flex;
   align-items: center;
 }
-* {
-  scroll-behavior: smooth;
-}
+
 .card {
   width: 50%;
   height: 22rem;
@@ -31,4 +29,5 @@
   background: rgb(84, 152, 194);
   border: 1px solid aquamarine;
   color: white;
+  flex-wrap: wrap;
 }
